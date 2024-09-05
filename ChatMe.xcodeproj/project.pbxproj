@@ -77,6 +77,7 @@
 		7B94E4F32C89264A00DE1990 /* ChatroomSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B780B302C88287600D51F15 /* ChatroomSocketService.swift */; };
 		7B94E4F62C89291900DE1990 /* UseCases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B780AFF2C88249D00D51F15 /* UseCases.framework */; };
 		7B94E4F72C89292A00DE1990 /* UseCases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B780AFF2C88249D00D51F15 /* UseCases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7B94E4F92C8A577200DE1990 /* SocketsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B94E4F82C8A577200DE1990 /* SocketsResponse.swift */; };
 		BC8FC8FF2D4C6506CAC9B5EB /* Pods_ChatroomLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284EF381A0FF54B8CAC3A819 /* Pods_ChatroomLogin.framework */; };
 		E559251B8891E5A56B5F4334 /* Pods_Window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF59068B21597F637DFE24E /* Pods_Window.framework */; };
 		F9ECCCCD463816E2A075EDEF /* Pods_Window_WindowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B28F2DFEC1F31F893EC592C /* Pods_Window_WindowTests.framework */; };
@@ -187,6 +188,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7B780AFE2C88249D00D51F15;
 			remoteInfo = UseCases;
+		};
+		7B94E4FA2C8A584400DE1990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B8407C22C87A2BF001741CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B780B122C88267F00D51F15;
+			remoteInfo = Models;
+		};
+		7B94E4FC2C8A5ABB00DE1990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B8407C22C87A2BF001741CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B780B122C88267F00D51F15;
+			remoteInfo = Models;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -318,6 +333,7 @@
 		7B8408572C87F82B001741CB /* ChatroomLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomLoginViewController.swift; sourceTree = "<group>"; };
 		7B8408592C87F855001741CB /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		7B8408602C87F95A001741CB /* ChatroomLogin.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ChatroomLogin.xcassets; sourceTree = "<group>"; };
+		7B94E4F82C8A577200DE1990 /* SocketsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketsResponse.swift; sourceTree = "<group>"; };
 		7D11C52B8467B445C667DC8C /* Pods_Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F869B358F59F1CF92F6DCDC /* Pods-Utility.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utility.debug.xcconfig"; path = "Target Support Files/Pods-Utility/Pods-Utility.debug.xcconfig"; sourceTree = "<group>"; };
 		A225806F41A765E4367E342B /* Pods_Utility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Utility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -452,6 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				7B780B152C88267F00D51F15 /* Models.h */,
+				7B94E4F82C8A577200DE1990 /* SocketsResponse.swift */,
 				7B780B1E2C88269F00D51F15 /* User.swift */,
 			);
 			path = Models;
@@ -689,6 +706,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B94E4FD2C8A5ABB00DE1990 /* PBXTargetDependency */,
 				7B780B372C882B8000D51F15 /* PBXTargetDependency */,
 			);
 			name = UseCases;
@@ -728,6 +746,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B94E4FB2C8A584400DE1990 /* PBXTargetDependency */,
 			);
 			name = ChatroomService;
 			productName = ChatroomService;
@@ -1261,6 +1280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B780B1F2C88269F00D51F15 /* User.swift in Sources */,
+				7B94E4F92C8A577200DE1990 /* SocketsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1409,6 +1429,16 @@
 			isa = PBXTargetDependency;
 			target = 7B780AFE2C88249D00D51F15 /* UseCases */;
 			targetProxy = 7B94E4F42C8928DC00DE1990 /* PBXContainerItemProxy */;
+		};
+		7B94E4FB2C8A584400DE1990 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B780B122C88267F00D51F15 /* Models */;
+			targetProxy = 7B94E4FA2C8A584400DE1990 /* PBXContainerItemProxy */;
+		};
+		7B94E4FD2C8A5ABB00DE1990 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B780B122C88267F00D51F15 /* Models */;
+			targetProxy = 7B94E4FC2C8A5ABB00DE1990 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

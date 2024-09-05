@@ -55,6 +55,10 @@ private extension Presenter {
             .flatMap({ [useCases] (username, email) in
                 useCases.login(username, email)
             })
+            .map({ (_) in
+                print("Login sucessful for user")
+                // Route to tabbar screen
+            })
             .asDriver(onErrorDriveWith: .never())
             .drive()
             .disposed(by: bag)
