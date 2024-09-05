@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 protocol Routing {
-    
+    func routeToWindow()
 }
 
 class Presenter: Presentation {
@@ -55,9 +55,9 @@ private extension Presenter {
             .flatMap({ [useCases] (username, email) in
                 useCases.login(username, email)
             })
-            .map({ (_) in
+            .map({ [router] (_) in
                 print("Login sucessful for user")
-                // Route to tabbar screen
+                router.routeToWindow()
             })
             .asDriver(onErrorDriveWith: .never())
             .drive()
