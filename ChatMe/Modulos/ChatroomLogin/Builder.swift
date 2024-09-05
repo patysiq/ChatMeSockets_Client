@@ -5,4 +5,29 @@
 //  Created by PATRICIA S SIQUEIRA on 03/09/24.
 //
 
-import Foundation
+import UIKit
+import Utility
+import UseCases
+
+public final class Builder {
+    
+    public static func build() -> UIViewController {
+        let storyboard = UIStoryboard.init(name: "ChatroomLogin", bundle: Bundle(for: self))
+        let view = ChatroomLoginViewController.instatiate(from: storyboard)
+        
+        let accountInteractor = UseCasesFactory.accountsInteractor
+        let router = Router(viewController: view)
+        
+        view.presenterProducer = {
+            Presenter.init(
+                input: $0,
+                router: router,
+                useCases: (
+                    login: accountInteractor.login, ()
+                )
+            )
+        }
+        
+        return view
+    }
+}

@@ -1,28 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Landing View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LandingViewController" id="Y6W-OH-hqX" customClass="LandingViewController" customModule="Landing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connectedicon" translatesAutoresizingMaskIntoConstraints="NO" id="GUl-Pz-guC">
+                                <rect key="frame" x="136.66666666666666" y="149" width="119.99999999999997" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="6tb-q0-r1t"/>
+                                    <constraint firstAttribute="width" constant="120" id="TOM-yN-nCr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat Me" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crp-6G-Qh6">
+                                <rect key="frame" x="117.66666666666669" y="319" width="158" height="52"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tiB-9O-b0B">
+                                <rect key="frame" x="71.666666666666686" y="421" width="250" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Messeger App" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31e-DX-bVe">
+                                        <rect key="frame" x="41.666666666666657" y="0.0" width="166.66666666666666" height="39.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Socket IO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAP-K4-dOy">
+                                        <rect key="frame" x="68.666666666666657" y="47.333333333333314" width="112.66666666666666" height="32.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="4uh-ja-v6N"/>
+                                    <constraint firstAttribute="height" constant="80" id="Uwz-7a-iAj"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okv-GT-q3x">
+                                <rect key="frame" x="96.666666666666686" y="658" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="IMD-Rg-X5a"/>
+                                    <constraint firstAttribute="width" constant="200" id="Ifh-BI-JgV"/>
+                                </constraints>
+                                <color key="tintColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start" imagePadding="20">
+                                    <imageReference key="image" image="play.circle" catalog="system" symbolScale="large"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onStartTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xxz-ox-fAN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tiB-9O-b0B" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="4TO-hc-tjC"/>
+                            <constraint firstItem="Crp-6G-Qh6" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="6tp-s5-fpu"/>
+                            <constraint firstItem="GUl-Pz-guC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="90" id="BfU-2i-dZv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="okv-GT-q3x" secondAttribute="bottom" constant="80" id="HVr-JN-T2v"/>
+                            <constraint firstItem="Crp-6G-Qh6" firstAttribute="top" secondItem="GUl-Pz-guC" secondAttribute="bottom" constant="50" id="J4C-Tr-nit"/>
+                            <constraint firstItem="tiB-9O-b0B" firstAttribute="top" secondItem="Crp-6G-Qh6" secondAttribute="bottom" constant="50" id="drP-Mc-tCH"/>
+                            <constraint firstItem="GUl-Pz-guC" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="u4O-Tk-4cJ"/>
+                            <constraint firstItem="okv-GT-q3x" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="viC-0s-74k"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="IAP-K4-dOy" id="zaq-Xp-3BH"/>
+                        <outlet property="logoImageView" destination="GUl-Pz-guC" id="BBB-rh-uBM"/>
+                        <outlet property="startButton" destination="okv-GT-q3x" id="tKg-O7-1WY"/>
+                        <outlet property="subtitleLabel" destination="31e-DX-bVe" id="x0B-ZK-Itt"/>
+                        <outlet property="titleLabel" destination="Crp-6G-Qh6" id="e2N-aP-1pw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="connectedicon" width="10" height="10"/>
+        <image name="play.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
