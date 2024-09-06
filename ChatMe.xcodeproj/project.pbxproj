@@ -16,6 +16,7 @@
 		7B6F559E2C8B1D5C0045CE2D /* Tabbar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F559D2C8B1D5C0045CE2D /* Tabbar.xcassets */; };
 		7B6F55A02C8B1F840045CE2D /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F559F2C8B1F840045CE2D /* UINavigationController+Extensions.swift */; };
 		7B6F55A32C8B212E0045CE2D /* Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B84082F2C87ADEC001741CB /* Utility.framework */; };
+		7B6F55A52C8B237E0045CE2D /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F55A42C8B237E0045CE2D /* UIColor+Extensions.swift */; };
 		7B780AF32C88153500D51F15 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B780AF22C88153500D51F15 /* Presenter.swift */; };
 		7B780AF52C88174A00D51F15 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B780AF42C88174A00D51F15 /* Router.swift */; };
 		7B780AF92C88231900D51F15 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B780AF82C88231900D51F15 /* String+Extension.swift */; };
@@ -414,6 +415,7 @@
 		732B3BF78E4326B30367EA25 /* Pods-UseCases.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UseCases.release.xcconfig"; path = "Target Support Files/Pods-UseCases/Pods-UseCases.release.xcconfig"; sourceTree = "<group>"; };
 		7B6F559D2C8B1D5C0045CE2D /* Tabbar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Tabbar.xcassets; sourceTree = "<group>"; };
 		7B6F559F2C8B1F840045CE2D /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
+		7B6F55A42C8B237E0045CE2D /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		7B780AF22C88153500D51F15 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		7B780AF42C88174A00D51F15 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		7B780AF82C88231900D51F15 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -778,6 +780,7 @@
 				7B84083B2C87AE66001741CB /* UiViewController+Extensions.swift */,
 				7B780AF82C88231900D51F15 /* String+Extension.swift */,
 				7B6F559F2C8B1F840045CE2D /* UINavigationController+Extensions.swift */,
+				7B6F55A42C8B237E0045CE2D /* UIColor+Extensions.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1758,6 +1761,7 @@
 				7B780AF92C88231900D51F15 /* String+Extension.swift in Sources */,
 				7B6F55A02C8B1F840045CE2D /* UINavigationController+Extensions.swift in Sources */,
 				7B84083C2C87AE66001741CB /* UiViewController+Extensions.swift in Sources */,
+				7B6F55A52C8B237E0045CE2D /* UIColor+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
