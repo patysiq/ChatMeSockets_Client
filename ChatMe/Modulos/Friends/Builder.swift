@@ -10,10 +10,11 @@ import Utility
 
 public final class Builder {
     
-    public static func build() -> UIViewController {
+    public static func build(usingNavigationFactory factory: NavigationFactory) -> UIViewController {
         
         let storyboard = UIStoryboard(name: "Friends", bundle: Bundle(for: self))
         let view = FriendsViewController.instatiate(from: storyboard)
+        view.title = "Friends"
         
         let submodules: Router.Submodules = ()
         let router = Router(viewController: view, submodules: submodules)
@@ -28,7 +29,7 @@ public final class Builder {
             ))
         }
         
-        return view
+        return factory(view)
     }
     
 }
