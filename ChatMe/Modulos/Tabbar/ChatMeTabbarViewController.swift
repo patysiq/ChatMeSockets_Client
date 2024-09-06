@@ -7,7 +7,11 @@
 
 import UIKit
 
-typealias ChaMeTabs = ()
+typealias ChaMeTabs = (
+    chatrooms: UIViewController,
+    friends: UIViewController,
+    profile: UIViewController
+)
 
 protocol Presentation {
     
