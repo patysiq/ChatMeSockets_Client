@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import EmptyView
 
 class FriendsViewController: UIViewController {
     
     private var presenter: Presentation!
     var presenterProducer: Presentation.Producer!
+    
+    @IBOutlet weak var tableview: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +27,10 @@ class FriendsViewController: UIViewController {
 private extension FriendsViewController {
     
     func setupUI() {
-        
+        guard let emptyImage = UIImage(systemName: "figure.socialdance") else {return}
+        let emptyView = EmptyView(frame: .zero)
+        emptyView.config(image: emptyImage, title: "Aaaaaa!", subtitle: "Nenhum amigo apareceu ainda.")
+        tableview.backgroundView = emptyView
     }
     
     func setupBinding() {

@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import EmptyView
 
 class ChatroomsViewController: UIViewController {
     
     private var presenter: Presentation!
     var presenterProducer: Presentation.Producer!
+    
+    @IBOutlet weak var tableview: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +25,13 @@ class ChatroomsViewController: UIViewController {
 
 }
 
-
 private extension ChatroomsViewController {
     
     func setupUI() {
-        
+        guard let emptyImage = UIImage(systemName: "stopwatch") else {return}
+        let emptyView = EmptyView(frame: .zero)
+        emptyView.config(image: emptyImage, title: "Uh Ho", subtitle: "Parece que não há salas de chat.")
+        tableview.backgroundView = emptyView
     }
     
     func setupBinding() {
