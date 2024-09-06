@@ -25,13 +25,18 @@ class Router {
 
 extension Router {
     static func tabs(usingSubmodules submodules: Submodules) ->  ChaMeTabs {
-        let chatroomItem = UITabBarItem(title: "Chat", image: nil, tag: 100)
+        let chatsImage = UIImage(systemName: "message")
+        let friendsImage = UIImage(systemName: "heart")
+        let profileImage = UIImage(systemName: "person")
+        
+        
+        let chatroomItem = UITabBarItem(title: "Chat", image: chatsImage, tag: 100)
         submodules.chatrooms.tabBarItem = chatroomItem
         
-        let friendItem = UITabBarItem(title: "Friends", image: nil, tag: 101)
+        let friendItem = UITabBarItem(title: "Friends", image: friendsImage, tag: 101)
         submodules.friends.tabBarItem = friendItem
         
-        let profileItem = UITabBarItem(title: "Profile", image: nil, tag: 102)
+        let profileItem = UITabBarItem(title: "Profile", image: profileImage, tag: 102)
         submodules.profile.tabBarItem = profileItem
         
         return (

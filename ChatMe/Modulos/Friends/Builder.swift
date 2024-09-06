@@ -12,7 +12,7 @@ public final class Builder {
     
     public static func build() -> UIViewController {
         
-        let storyboard = UIStoryboard(name: "Chatrooms", bundle: Bundle(for: self))
+        let storyboard = UIStoryboard(name: "Friends", bundle: Bundle(for: self))
         let view = FriendsViewController.instatiate(from: storyboard)
         
         let submodules: Router.Submodules = ()

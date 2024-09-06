@@ -27,6 +27,7 @@ class ChatMeTabbarViewController: UITabBarController {
     
     init(tabs: ChaMeTabs) {
         super.init(nibName: nil, bundle: nil)
+        self.viewControllers = [tabs.chatrooms, tabs.friends, tabs.profile]
     }
     
     required init?(coder: NSCoder) {

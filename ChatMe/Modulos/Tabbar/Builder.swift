@@ -15,9 +15,9 @@ public final class Builder {
     
     public static func build() -> UITabBarController {
         let submodules: Router.Submodules = (
-            chatrooms: Chatrooms.Router.build(),
-            friends: Friends.Router.build(),
-            profile: Profile.Router.build()
+            chatrooms: Chatrooms.Builder.build(),
+            friends: Friends.Builder.build(),
+            profile: Profile.Builder.build()
         )
         let tabs: ChaMeTabs = Router.tabs(usingSubmodules: submodules)
         let presenter = Presenter(useCases: ())
