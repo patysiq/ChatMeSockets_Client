@@ -11,6 +11,8 @@ class ProfileViewController: UIViewController {
     
     private var presenter: Presentation!
     var presenterProducer: Presentation.Producer!
+    
+    @IBOutlet weak var profileImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ class ProfileViewController: UIViewController {
 private extension ProfileViewController {
     
     func setupUI() {
-        
+        profileImageView.image = UIImage(named: "female", in: Bundle(for: ProfileViewController.self), with: nil)
     }
     
     func setupBinding() {
