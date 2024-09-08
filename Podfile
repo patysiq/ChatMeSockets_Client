@@ -9,6 +9,8 @@ target 'ChatMe' do
     pod 'RxSwift', '6.7.1'
     pod 'RxCocoa', '6.7.1'
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
 
 end
 
@@ -20,6 +22,8 @@ target 'ChatroomLogin' do
     pod 'RxSwift', '6.7.1'
     pod 'RxCocoa', '6.7.1'
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
 
 end
 
@@ -31,6 +35,8 @@ target 'Landing' do
     pod 'RxSwift', '6.7.1'
     pod 'RxCocoa', '6.7.1'
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
 
 end
 
@@ -42,6 +48,8 @@ target 'Utility' do
     pod 'RxSwift', '6.7.1'
     pod 'RxCocoa', '6.7.1'
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
 
 end
 
@@ -53,6 +61,8 @@ target 'Window' do
     pod 'RxSwift', '6.7.1'
     pod 'RxCocoa', '6.7.1'
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
 
   target 'WindowTests' do
     # Pods for testing
@@ -68,6 +78,8 @@ target 'UseCases' do
     pod 'RxSwift', '6.7.1'
     pod 'RxCocoa', '6.7.1'
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
 
 end
 
@@ -79,6 +91,21 @@ target 'Models' do
     pod 'RxSwift', '6.7.1'
     pod 'RxCocoa', '6.7.1'
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
+
+end
+
+target 'Tabbar' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Window
+    pod 'RxSwift', '6.7.1'
+    pod 'RxCocoa', '6.7.1'
+    pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
 
 end
 
@@ -90,6 +117,60 @@ target 'ChatroomService' do
     pod 'RxSwift', '6.7.1'
     pod 'RxCocoa', '6.7.1'
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
+
+end
+
+target 'EmptyView' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Window
+    pod 'RxSwift', '6.7.1'
+    pod 'RxCocoa', '6.7.1'
+    pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
+
+end
+
+target 'Chatrooms' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Window
+    pod 'RxSwift', '6.7.1'
+    pod 'RxCocoa', '6.7.1'
+    pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
+
+end
+
+target 'Friends' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Window
+    pod 'RxSwift', '6.7.1'
+    pod 'RxCocoa', '6.7.1'
+    pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
+
+end
+
+target 'Profile' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Window
+    pod 'RxSwift', '6.7.1'
+    pod 'RxCocoa', '6.7.1'
+    pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
 
 end
 

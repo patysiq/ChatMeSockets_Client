@@ -12,7 +12,7 @@ import Models
 
 public protocol ChatroomSocketApi {
     var socketResponse: Observable<ChatroomSockets.Response> { get }
-    func login(email: String, username: String)
+    func login(email: String, password: String)
 }
 
 
@@ -38,9 +38,9 @@ public class ChatroomSocketService {
 extension ChatroomSocketService: ChatroomSocketApi {
 
     
-    public func login(email: String, username: String) {
-        print("Login request receive for username \(username) and email \(email)")
-        self.socket.emit(ChatSocket.Request.login, username, email)
+    public func login(email: String, password: String) {
+        print("Login request receive for username \(email) and email \(password)")
+        self.socket.emit(ChatSocket.Request.login, email, password)
     }
 }
 
@@ -67,8 +67,8 @@ private extension ChatroomSocketService {
         self.socket.on(ChatSocket.Response.loginResponse) { [weak self] (dataArray, socketAck) in
             print("Login sucessful for user: \(dataArray)")
             
-            if let username = dataArray[0] as? String, let email = dataArray[1] as? String {
-                self?.socketResponseRelay.accept(.loggedIn(username: username, email: email))
+            if let email = dataArray[0] as? String, let password = dataArray[1] as? String {
+                self?.socketResponseRelay.accept(.loggedIn(username: email, email: password))
             }
         }
     }

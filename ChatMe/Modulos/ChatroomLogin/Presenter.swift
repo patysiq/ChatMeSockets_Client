@@ -16,7 +16,7 @@ protocol Routing {
 class Presenter: Presentation {
     
     typealias UseCases = (
-        login: ( _ username: String, _ email: String) -> Single<()>, ()
+        login: ( _ email: String, _ password: String) -> Single<()>, ()
     )
     
     var input: Input
@@ -40,8 +40,8 @@ private extension Presenter {
     
     static func output(input: Input) -> Output {
         
-        let enableLoginDriver = Driver.combineLatest(input.username.map({ !$0.isEmpty }),
-                                                     input.email.map({ !$0.isEmpty && $0.isEmail() })).map({ $0 && $1 })
+        let enableLoginDriver = Driver.combineLatest(input.email.map({ $0.isEmail() }),
+                                                     input.password.map({ !$0.isEmpty })).map({ $0 && $1 })
         
         return (
             enableLogin: enableLoginDriver, ()
@@ -50,10 +50,10 @@ private extension Presenter {
     
     func process() {
         self.input.login
-            .withLatestFrom(Driver.combineLatest(self.input.username , self.input.email))
+            .withLatestFrom(Driver.combineLatest(self.input.email , self.input.password))
             .asObservable()
-            .flatMap({ [useCases] (username, email) in
-                useCases.login(username, email)
+            .flatMap({ [useCases] (email, password) in
+                useCases.login(email, password)
             })
             .map({ [router] (_) in
                 print("Login sucessful for user")

@@ -42,30 +42,28 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="I0X-iN-e7u">
-                                <rect key="frame" x="60" y="566" width="273" height="100"/>
+                                <rect key="frame" x="60" y="566" width="273" height="120"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7U-AR-CAb">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7U-AR-CAb">
                                         <rect key="frame" x="0.0" y="0.0" width="273" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Ogn-iz-Muy"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0w-fn-ctc">
-                                        <rect key="frame" x="0.0" y="70" width="273" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYl-0x-eA2">
+                                        <rect key="frame" x="83.333333333333343" y="70" width="106.33333333333334" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="1PE-5E-1aS"/>
+                                            <constraint firstAttribute="height" constant="50" id="dJ7-yd-vh7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="b0w-fn-ctc" secondAttribute="trailing" id="2vt-0z-Fuv"/>
                                     <constraint firstItem="a7U-AR-CAb" firstAttribute="leading" secondItem="I0X-iN-e7u" secondAttribute="leading" id="7Dt-aZ-yu7"/>
                                     <constraint firstAttribute="trailing" secondItem="a7U-AR-CAb" secondAttribute="trailing" id="PgZ-qc-jGZ"/>
-                                    <constraint firstItem="b0w-fn-ctc" firstAttribute="leading" secondItem="I0X-iN-e7u" secondAttribute="leading" id="Xdv-vy-HnA"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEQ-cb-6jR">
@@ -102,10 +100,10 @@
                     <connections>
                         <outlet property="avatarImageView" destination="Xop-6f-zTO" id="wmn-lB-3gm"/>
                         <outlet property="descriptionLabel" destination="x2K-lE-1Or" id="8ED-PT-s7o"/>
-                        <outlet property="emailTextfield" destination="b0w-fn-ctc" id="wb8-B5-PRh"/>
+                        <outlet property="emailTextfield" destination="a7U-AR-CAb" id="0fH-IR-zlH"/>
                         <outlet property="loginButton" destination="hEQ-cb-6jR" id="vzg-qX-jDU"/>
+                        <outlet property="passwordTextfield" destination="hYl-0x-eA2" id="j7Z-Ve-R4R"/>
                         <outlet property="titleLabel" destination="PkU-yu-y6e" id="T4f-Hz-JJB"/>
-                        <outlet property="usernameTextfield" destination="a7U-AR-CAb" id="Ym2-CM-ifs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,8 +11,8 @@ import RxCocoa
 
 protocol Presentation {
     typealias Input = (
-        username: Driver<String>,
         email: Driver<String>,
+        password: Driver<String>,
         login: Driver<Void>
     )
     typealias Output = (
@@ -29,8 +29,8 @@ class ChatroomLoginViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var usernameTextfield: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
+    @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
     private var presenter: Presentation!
@@ -41,8 +41,8 @@ class ChatroomLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = presenterProducer((
-            username: usernameTextfield.rx.text.orEmpty.asDriver(),
             email: emailTextfield.rx.text.orEmpty.asDriver(),
+            password: passwordTextfield.rx.text.orEmpty.asDriver(),
             login: loginButton.rx.tap.asDriver()
         ))
         setapUI()
