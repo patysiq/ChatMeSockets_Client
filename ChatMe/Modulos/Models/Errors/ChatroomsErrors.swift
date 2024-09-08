@@ -6,10 +6,24 @@
 //
 
 public enum ChatroomsErrors: Error {
-    case notFound
+    case notFound(message: String)
     case mandatoryMissing
     case internalError
-    case unauthorized
+    case unauthorized(message: String)
     case parsingFailed
     case custom(error: String)
+}
+
+public extension ChatroomsErrors {
+    
+    var errorDescription: String? {
+        switch self {
+        case .notFound(let message): return "\(message) not found"
+        case .mandatoryMissing: return "Mandatory parameters missing"
+        case .internalError: return "Somenthing went wrong"
+        case .unauthorized(let message): return "\(message) not authorized"
+        case .parsingFailed: return "Somenthing went wrong while parsing"
+        case .custom(let description): return description
+        }
+    }
 }

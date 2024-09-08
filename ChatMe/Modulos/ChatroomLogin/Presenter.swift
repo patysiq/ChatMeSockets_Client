@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Models
 
 protocol Routing {
     func routeToWindow()
@@ -50,10 +51,16 @@ private extension Presenter {
     
     func process() {
         self.input.login
+            .debug("Login request", trimOutput: false)
             .withLatestFrom(Driver.combineLatest(self.input.email , self.input.password))
             .asObservable()
             .flatMap({ [useCases] (email, password) in
-                useCases.login(email, password)
+                useCases.login(email, password).catch { (error) -> Single<()> in
+                    if let chatroomError = error as? ChatroomsErrors {
+                        print(String(describing: chatroomError.errorDescription))
+                    }
+                    return .never()
+                }
             })
             .map({ [router] (_) in
                 print("Login sucessful for user")

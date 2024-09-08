@@ -19,30 +19,26 @@ public final class AccountService {
     public init() {}
 }
 
-extension AccountService: AccoutAPI{
+extension AccountService: AccoutAPI {
     
     public func login(email: String, password: String) -> Single<User> {
-        
-        
-        /// TODO - Error handling for login failure cases
-        
-          try! AccoutHttpRouter
+
+          return try! AccoutHttpRouter
             .login(user: User(email: email, password: password))
             .rx.request(withService: httpService)
             .responseJSON()
-            .map { (result) -> User in
-                guard let data = result.data else {
-                    throw ChatroomsErrors.notFound
+            .map ({ (dataResponse) -> User in
+                guard let data = dataResponse.data else {
+                    throw ChatroomsErrors.notFound(message: email)
                 }
-                
-                if result.response?.statusCode == 200 {
-                    let authResponse = try User(data: data)
-                    print(authResponse)
-                    return authResponse
+                if dataResponse.response?.statusCode == 200 {
+                    do { return try User.init(data: data) } catch {
+                        throw ChatroomsErrors.parsingFailed
+                    }
                 } else {
-                    throw ChatroomsErrors.internalError
+                    throw ChatroomsErrors.unauthorized(message: email)
                 }
-            }
+            })
             .asSingle()
     }
     

@@ -19,6 +19,7 @@
 		7B0063292C8E09640016903F /* Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B84082F2C87ADEC001741CB /* Utility.framework */; };
 		7B00632D2C8E0DCC0016903F /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B00632C2C8E0DCC0016903F /* AccountService.swift */; };
 		7B0063302C8E10DC0016903F /* ChatroomsErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B00632F2C8E10DC0016903F /* ChatroomsErrors.swift */; };
+		7B0063332C8E354C0016903F /* Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B780B132C88267F00D51F15 /* Models.framework */; };
 		7B3B95BA2C8B4E5D00AF4837 /* Chatrooms.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B95B92C8B4E5D00AF4837 /* Chatrooms.xcassets */; };
 		7B3B95BC2C8B68A200AF4837 /* Profile.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B95BB2C8B68A200AF4837 /* Profile.xcassets */; };
 		7B4E28002C8C6DE3000AA39B /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E27FF2C8C6DE3000AA39B /* HttpService.swift */; };
@@ -150,6 +151,13 @@
 			remoteInfo = Utility;
 		};
 		7B00632A2C8E0CFB0016903F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B8407C22C87A2BF001741CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B780B122C88267F00D51F15;
+			remoteInfo = Models;
+		};
+		7B0063312C8E35420016903F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7B8407C22C87A2BF001741CB /* Project object */;
 			proxyType = 1;
@@ -690,6 +698,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B0063332C8E354C0016903F /* Models.framework in Frameworks */,
 				7B94E4F62C89291900DE1990 /* UseCases.framework in Frameworks */,
 				7B84085B2C87F8FA001741CB /* Utility.framework in Frameworks */,
 				BC8FC8FF2D4C6506CAC9B5EB /* Pods_ChatroomLogin.framework in Frameworks */,
@@ -1362,6 +1371,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B0063322C8E35420016903F /* PBXTargetDependency */,
 				7B94E4F52C8928DC00DE1990 /* PBXTargetDependency */,
 				7B84085E2C87F8FA001741CB /* PBXTargetDependency */,
 			);
@@ -2175,6 +2185,11 @@
 			isa = PBXTargetDependency;
 			target = 7B780B122C88267F00D51F15 /* Models */;
 			targetProxy = 7B00632A2C8E0CFB0016903F /* PBXContainerItemProxy */;
+		};
+		7B0063322C8E35420016903F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B780B122C88267F00D51F15 /* Models */;
+			targetProxy = 7B0063312C8E35420016903F /* PBXContainerItemProxy */;
 		};
 		7B3B95B42C8B4DF200AF4837 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
