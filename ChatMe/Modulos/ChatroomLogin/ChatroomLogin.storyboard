@@ -19,51 +19,70 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat Me" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkU-yu-y6e">
-                                <rect key="frame" x="117.66666666666669" y="149" width="158" height="52"/>
+                                <rect key="frame" x="117.66666666666669" y="119" width="158" height="52"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Enter details" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2K-lE-1Or">
-                                <rect key="frame" x="106.66666666666669" y="221" width="180" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Entre com seus dados de conta" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2K-lE-1Or">
+                                <rect key="frame" x="106.66666666666669" y="191" width="180" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="QLZ-68-T5v"/>
                                     <constraint firstAttribute="height" constant="45" id="htS-Lm-P8Q"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xop-6f-zTO">
-                                <rect key="frame" x="96.666666666666686" y="316" width="200" height="200"/>
+                                <rect key="frame" x="96.666666666666686" y="286" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="bpM-q7-5hi"/>
                                     <constraint firstAttribute="width" constant="200" id="dhf-fd-XyU"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="I0X-iN-e7u">
-                                <rect key="frame" x="60" y="566" width="273" height="120"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="I0X-iN-e7u">
+                                <rect key="frame" x="20" y="505.99999999999994" width="353" height="169.33333333333331"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7U-AR-CAb">
-                                        <rect key="frame" x="0.0" y="0.0" width="273" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="s3t-0o-5S7">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="110"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7U-AR-CAb">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Ogn-iz-Muy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYl-0x-eA2">
+                                                <rect key="frame" x="0.0" y="60" width="353" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="dJ7-yd-vh7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Ogn-iz-Muy"/>
+                                            <constraint firstItem="hYl-0x-eA2" firstAttribute="leading" secondItem="s3t-0o-5S7" secondAttribute="leading" id="GNg-Wt-y6I"/>
+                                            <constraint firstAttribute="trailing" secondItem="a7U-AR-CAb" secondAttribute="trailing" id="S8Q-7A-WfC"/>
+                                            <constraint firstAttribute="trailing" secondItem="hYl-0x-eA2" secondAttribute="trailing" id="pKZ-R6-ein"/>
+                                            <constraint firstItem="a7U-AR-CAb" firstAttribute="leading" secondItem="s3t-0o-5S7" secondAttribute="leading" id="xI5-U0-3wu"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYl-0x-eA2">
-                                        <rect key="frame" x="83.333333333333343" y="70" width="106.33333333333334" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="dJ7-yd-vh7"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                    </textField>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWs-Qz-hIZ">
+                                        <rect key="frame" x="0.0" y="135" width="353" height="34.333333333333343"/>
+                                        <color key="tintColor" red="0.058823529409999999" green="0.058823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Já possui uma conta?"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="a7U-AR-CAb" firstAttribute="leading" secondItem="I0X-iN-e7u" secondAttribute="leading" id="7Dt-aZ-yu7"/>
-                                    <constraint firstAttribute="trailing" secondItem="a7U-AR-CAb" secondAttribute="trailing" id="PgZ-qc-jGZ"/>
+                                    <constraint firstItem="SWs-Qz-hIZ" firstAttribute="leading" secondItem="I0X-iN-e7u" secondAttribute="leading" id="WIB-h3-YnF"/>
+                                    <constraint firstItem="s3t-0o-5S7" firstAttribute="leading" secondItem="I0X-iN-e7u" secondAttribute="leading" id="bc2-fn-ArN"/>
+                                    <constraint firstAttribute="trailing" secondItem="SWs-Qz-hIZ" secondAttribute="trailing" id="hQv-DD-f83"/>
+                                    <constraint firstAttribute="trailing" secondItem="s3t-0o-5S7" secondAttribute="trailing" id="xge-Le-bxP"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEQ-cb-6jR">
@@ -84,15 +103,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="PkU-yu-y6e" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="90" id="2wg-xU-9Y3"/>
+                            <constraint firstItem="PkU-yu-y6e" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="2wg-xU-9Y3"/>
                             <constraint firstItem="x2K-lE-1Or" firstAttribute="top" secondItem="PkU-yu-y6e" secondAttribute="bottom" constant="20" id="7GQ-ia-abR"/>
                             <constraint firstItem="Xop-6f-zTO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="BbR-0I-Ds3"/>
                             <constraint firstItem="x2K-lE-1Or" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="BfA-ba-Ko6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hEQ-cb-6jR" secondAttribute="bottom" constant="50" id="JN3-p6-0YT"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="I0X-iN-e7u" secondAttribute="trailing" constant="60" id="JdZ-tY-T70"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="I0X-iN-e7u" secondAttribute="trailing" constant="20" id="JdZ-tY-T70"/>
                             <constraint firstItem="Xop-6f-zTO" firstAttribute="top" secondItem="x2K-lE-1Or" secondAttribute="bottom" constant="50" id="SMt-ge-YmS"/>
-                            <constraint firstItem="I0X-iN-e7u" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="e4X-iy-qgd"/>
-                            <constraint firstItem="I0X-iN-e7u" firstAttribute="top" secondItem="Xop-6f-zTO" secondAttribute="bottom" constant="50" id="vLz-mf-fSi"/>
+                            <constraint firstItem="I0X-iN-e7u" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="e4X-iy-qgd"/>
+                            <constraint firstItem="I0X-iN-e7u" firstAttribute="top" secondItem="Xop-6f-zTO" secondAttribute="bottom" constant="20" id="vLz-mf-fSi"/>
                             <constraint firstItem="hEQ-cb-6jR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="vbv-84-XAo"/>
                             <constraint firstItem="PkU-yu-y6e" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xKC-b3-m4y"/>
                         </constraints>
@@ -103,6 +122,7 @@
                         <outlet property="emailTextfield" destination="a7U-AR-CAb" id="0fH-IR-zlH"/>
                         <outlet property="loginButton" destination="hEQ-cb-6jR" id="vzg-qX-jDU"/>
                         <outlet property="passwordTextfield" destination="hYl-0x-eA2" id="j7Z-Ve-R4R"/>
+                        <outlet property="swapSignUpButton" destination="SWs-Qz-hIZ" id="O9H-pJ-6LO"/>
                         <outlet property="titleLabel" destination="PkU-yu-y6e" id="T4f-Hz-JJB"/>
                     </connections>
                 </viewController>

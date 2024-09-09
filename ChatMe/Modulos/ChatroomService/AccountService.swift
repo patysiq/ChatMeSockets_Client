@@ -11,6 +11,7 @@ import Models
 
 public protocol AccoutAPI {
     func login(email: String, password: String) -> Single<User>
+    func signUp(user: User) -> Single<User>
 }
 
 public final class AccountService {
@@ -40,6 +41,28 @@ extension AccountService: AccoutAPI {
                 }
             })
             .asSingle()
+    }
+    
+    public func signUp(user: User) -> Single<User> {
+        return try! AccoutHttpRouter
+                .singUp(user: user)
+                .rx.request(withService: httpService)
+                .responseJSON()
+                .map({ (dataResult) -> User in
+                    guard let data = dataResult.data else {
+                        throw ChatroomsErrors.notFound(message: user.email)
+                    }
+                    
+                    if dataResult.response?.statusCode == 200 {
+                        do { return try User.init(data: data) } catch {
+                            throw ChatroomsErrors.parsingFailed
+                        }
+                    }
+                    throw ChatroomsErrors.unauthorized(message: user.email)
+                })
+                .map({ $0 })
+                .asSingle()
+        
     }
     
 }

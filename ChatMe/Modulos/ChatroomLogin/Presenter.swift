@@ -12,6 +12,7 @@ import Models
 
 protocol Routing {
     func routeToWindow()
+    func routeToSignUp()
 }
 
 class Presenter: Presentation {
@@ -70,5 +71,11 @@ private extension Presenter {
             .drive()
             .disposed(by: bag)
         
+        self.input.swapSignUp
+            .map({ [router] (_) in
+                router.routeToSignUp()
+            })
+            .drive()
+            .disposed(by: bag)
     }
 }

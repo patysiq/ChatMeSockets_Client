@@ -82,7 +82,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emaillabel" destination="Rnt-NL-rQQ" id="D1o-em-tIj"/>
+                        <outlet property="logoutButton" destination="W1k-yX-wQd" id="tfI-7U-2aC"/>
                         <outlet property="profileImageView" destination="lMf-nu-viE" id="OPB-mX-ss3"/>
+                        <outlet property="profileLabel" destination="zdv-Zw-0mi" id="BAQ-hE-IZp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -24,12 +24,17 @@ public final class AccountInteractor {
 
 public extension AccountInteractor {
     
-    func login(email: String, password: String) -> Single<()>{
+    func login(email: String, password: String) -> Single<()> {
         self.accountService
             .login(email: email, password: password)
             .flatMap(saveUser(user:))
+    }
         
-        
+        func signUp(email: String, username: String, password: String) -> Single<()> {
+            self.accountService
+                .signUp(user: User(email: email, username: username, password: password))
+                .flatMap(saveUser(user:))
+        }
         
 //        self.websocketService.login(email: email, password: password)
 //        
@@ -50,7 +55,7 @@ public extension AccountInteractor {
 //                    self?.websocketService.login(email: email, password: password)
 //                })
         
-    }
+    
 }
 
 private extension AccountInteractor {

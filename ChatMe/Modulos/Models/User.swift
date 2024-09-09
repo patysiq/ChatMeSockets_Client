@@ -11,7 +11,8 @@ import Utility
 // MARK: - User
 
 public struct User: Codable {
-    public var username, email, password: String?
+    public var email: String
+    public var username, password: String?
 }
 
 public extension User {

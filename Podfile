@@ -174,6 +174,19 @@ target 'Profile' do
 
 end
 
+target 'ChatroomSignUp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Window
+    pod 'RxSwift', '6.7.1'
+    pod 'RxCocoa', '6.7.1'
+    pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+    pod 'Alamofire'
+    pod 'RxAlamofire'
+
+end
+
 post_install do |installer|
     installer.generated_projects.each do |project|
         project.targets.each do |target|

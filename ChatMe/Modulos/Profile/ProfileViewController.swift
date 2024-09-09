@@ -13,7 +13,10 @@ class ProfileViewController: UIViewController {
     var presenterProducer: Presentation.Producer!
     
     @IBOutlet weak var profileImageView: UIImageView!
-
+    @IBOutlet weak var profileLabel: UILabel!
+    @IBOutlet weak var emaillabel: UILabel!
+    @IBOutlet weak var logoutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = presenterProducer(())

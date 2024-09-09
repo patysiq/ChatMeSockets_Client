@@ -14,7 +14,8 @@ class Router {
     
     typealias Submodules = (
         landingModule: (_ onStart: @escaping () -> Void) -> UIViewController,
-        loginModule: (_ onLogin: @escaping () -> Void) -> UIViewController,
+        loginModule: (_ onLogin: @escaping () -> Void, _ onSignUp: @escaping () -> Void) -> UIViewController,
+        signUpModule: (_ onSignUp: @escaping () -> Void, _ swapLogin: @escaping () -> Void) -> UIViewController,
         tabbarModule: () -> UIViewController
     )
     
@@ -23,9 +24,6 @@ class Router {
         self.submodules = submodules
     }
 }
-
-
-
 
 extension Router: Routing {
   
@@ -38,13 +36,33 @@ extension Router: Routing {
     }
     
     func routeToLogin() {
-        let loginView = self.submodules.loginModule { [weak self] in
+        let loginView = self.submodules.loginModule ({ [weak self] in
+            ///On login complete, lauch the tab bar
             print("Lauch tab bar from here")
-            let tabbarView = self?.submodules.tabbarModule()
-            self?.window.rootViewController = tabbarView
-            self?.window.makeKeyAndVisible()
+            self?.routeToChatrooms()
+        }) { [weak self] in
+            ///On swap sign up, lauch tha sign up view
+            self?.routeToSignUp()
+            
         }
         self.window.rootViewController = loginView
+        self.window.makeKeyAndVisible()
+    }
+    
+    func routeToSignUp() {
+        let signUpView = self.submodules.signUpModule ({ [weak self] in
+            print("Lauch tab bar from here")
+            self?.routeToChatrooms()
+        }) { [weak self] in
+            self?.routeToLogin()
+        }
+        self.window.rootViewController = signUpView
+        self.window.makeKeyAndVisible()
+    }
+    
+    func routeToChatrooms() {
+        let tabbarView = self.submodules.tabbarModule()
+        self.window.rootViewController = tabbarView
         self.window.makeKeyAndVisible()
     }
     
