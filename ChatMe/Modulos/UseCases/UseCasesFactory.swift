@@ -14,5 +14,6 @@ public final class UseCasesFactory {
     private static let deployedUrl = "http://localhost:3001"
     //private static let websocketservice = ChatroomSocketService(socketURl: deployedUrl)
     private static let accountService = AccountService()
-    public static let accountsInteractor: AccountInteractor = AccountInteractor(accountService: accountService)
+    private static let userSettings = UserSettingsService.shared
+    public static let accountsInteractor: AccountInteractor = AccountInteractor(accountService: accountService, userSettings: userSettings)
 }

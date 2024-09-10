@@ -7,6 +7,7 @@
 
 import UIKit
 import Utility
+import UseCases
 
 public final class Builder {
     
@@ -16,6 +17,7 @@ public final class Builder {
         let view = ProfileViewController.instatiate(from: storyboard)
         view.title = "Profile"
         
+        let accountInteractor = UseCasesFactory.accountsInteractor
         let submodules: Router.Submodules = ()
         let router = Router(viewController: view, submodules: submodules)
         
@@ -24,7 +26,9 @@ public final class Builder {
                 router: router,
                 useCases: (
                     input: (),
-                    output: ()
+                    output: (
+                        profileUser: accountInteractor.user.filter({ $0 != nil }).map( { $0! }) , ()
+                    )
                 )
             ))
         }

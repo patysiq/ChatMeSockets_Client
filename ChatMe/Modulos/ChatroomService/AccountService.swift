@@ -24,7 +24,7 @@ extension AccountService: AccoutAPI {
     
     public func login(email: String, password: String) -> Single<User> {
 
-          return try! AccoutHttpRouter
+          return AccoutHttpRouter
             .login(user: User(email: email, password: password))
             .rx.request(withService: httpService)
             .responseJSON()
@@ -44,7 +44,7 @@ extension AccountService: AccoutAPI {
     }
     
     public func signUp(user: User) -> Single<User> {
-        return try! AccoutHttpRouter
+        return AccoutHttpRouter
                 .singUp(user: user)
                 .rx.request(withService: httpService)
                 .responseJSON()
@@ -60,7 +60,6 @@ extension AccountService: AccoutAPI {
                     }
                     throw ChatroomsErrors.unauthorized(message: user.email)
                 })
-                .map({ $0 })
                 .asSingle()
         
     }

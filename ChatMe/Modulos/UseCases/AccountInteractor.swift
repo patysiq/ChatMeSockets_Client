@@ -13,11 +13,13 @@ import RxRelay
 public final class AccountInteractor {
     
     private let accountService: AccoutAPI
+    private let userSettings: UserSettingsAPI
     private let userRelay: BehaviorRelay<User?> = BehaviorRelay(value: nil)
     public lazy var user: Observable<User?> = self.userRelay.asObservable()
     
-    init(accountService: AccoutAPI) {
+    init(accountService: AccoutAPI, userSettings: UserSettingsAPI) {
         self.accountService = accountService
+        self.userSettings = userSettings
     }
     
 }
@@ -62,6 +64,9 @@ private extension AccountInteractor {
     
     func saveUser(user: User?) -> Single<()> {
         self.userRelay.accept(user)
+        if let tokenData = user?.tokenData {
+            self.userSettings.saveTokens(tokenData: tokenData)
+        }
         return .just(())
     }
 }

@@ -3,4 +3,130 @@
    uuid = "7F11F4E1-A0F7-47E5-AAEC-6C5B55D74952"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16474896-38C9-43F2-BD3C-DDD4FF19F9A0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChatMe/Modulos/UseCases/AccountInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "saveUser(user:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "16474896-38C9-43F2-BD3C-DDD4FF19F9A0 - 7bf1cb07ba26bdf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UseCases.AccountInteractor.saveUser(user: Swift.Optional&lt;Models.User&gt;) -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, ()&gt;"
+                  moduleName = "UseCases"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patriciasampaio/Desktop/ChatMe/ChatMe/Modulos/UseCases/AccountInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67">
+               </Location>
+               <Location
+                  uuid = "16474896-38C9-43F2-BD3C-DDD4FF19F9A0 - 7bf1cb07ba26bdf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UseCases.AccountInteractor.saveUser(user: Swift.Optional&lt;Models.User&gt;) -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, ()&gt;"
+                  moduleName = "UseCases"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patriciasampaio/Desktop/ChatMe/ChatMe/Modulos/UseCases/AccountInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84590DC9-76FA-4333-8820-3D4EFCCD1227"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChatMe/Modulos/ChatroomService/AccountService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "login(email:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01473ADD-2D50-4C54-B217-D9199ED1A6D6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChatMe/Modulos/ChatroomService/AccountService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "login(email:password:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "01473ADD-2D50-4C54-B217-D9199ED1A6D6 - f500ddf9c7d1f7c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) throws -&gt; Models.User in ChatroomService.AccountService.login(email: Swift.String, password: Swift.String) -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, Models.User&gt;"
+                  moduleName = "ChatroomService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patriciasampaio/Desktop/ChatMe/ChatMe/Modulos/ChatroomService/AccountService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36">
+               </Location>
+               <Location
+                  uuid = "01473ADD-2D50-4C54-B217-D9199ED1A6D6 - f500ddf9c7d1f7c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) throws -&gt; Models.User in ChatroomService.AccountService.login(email: Swift.String, password: Swift.String) -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, Models.User&gt;"
+                  moduleName = "ChatroomService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patriciasampaio/Desktop/ChatMe/ChatMe/Modulos/ChatroomService/AccountService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D149153-BD95-4530-AF62-D2FD55A6F2C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChatMe/Modulos/ChatroomService/AccountService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "login(email:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

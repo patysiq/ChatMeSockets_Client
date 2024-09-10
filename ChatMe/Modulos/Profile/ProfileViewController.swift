@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class ProfileViewController: UIViewController {
     
     private var presenter: Presentation!
     var presenterProducer: Presentation.Producer!
+    private let bag = DisposeBag()
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileLabel: UILabel!
@@ -33,6 +35,12 @@ private extension ProfileViewController {
     }
     
     func setupBinding() {
+        presenter.output.username
+            .drive(self.profileLabel.rx.text)
+            .disposed(by: bag)
         
+        presenter.output.email
+            .drive(self.emaillabel.rx.text)
+            .disposed(by: bag)
     }
 }

@@ -1,36 +1,29 @@
 //
-//  User.swift
+//  TokenData.swift
 //  Models
 //
-//  Created by PATRICIA S SIQUEIRA on 04/09/24.
+//  Created by PATRICIA S SIQUEIRA on 10/09/24.
 //
 
 import Foundation
 import Utility
 
-// MARK: - User
-
-public struct User: Codable {
-    public var email: String
-    public var username, password: String?
-    public var tokenData: TokenData?
+public struct TokenData: Codable {
+    public let email, acessToken, refreshToken: String
+    public let expiresIn: Int64
+    
+    public init(email: String, acessToken: String, refreshToken: String, expiresIn: Int64) {
+        self.email = email
+        self.acessToken = acessToken
+        self.refreshToken = refreshToken
+        self.expiresIn = expiresIn
+    }
 }
 
-public extension User {
-    
-    init(email: String, password: String) {
-        self.email = email
-        self.password = password
-    }
-    
-    init(email: String, username: String, password: String) {
-        self.email = email
-        self.username = username
-        self.password = password
-    }
+public extension TokenData {
     
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(User.self, from: data)
+        self = try newJSONDecoder().decode(TokenData.self, from: data)
     }
     
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -50,6 +43,10 @@ public extension User {
     
     func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
         return String(data: try self.jsonData(), encoding: encoding)
+    }
+    
+    func with(email: String? = nil, acessToken: String? = nil, refreshToken: String? = nil, expiresIn: Int? = nil) {
+        
     }
 }
 

@@ -59,6 +59,7 @@
 		7B780B332C882A5D00D51F15 /* UseCasesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B780B322C882A5D00D51F15 /* UseCasesFactory.swift */; };
 		7B780B342C882B8000D51F15 /* ChatroomService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B780B252C8827EE00D51F15 /* ChatroomService.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		7B780B352C882B8000D51F15 /* ChatroomService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B780B252C8827EE00D51F15 /* ChatroomService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7B81C3BB2C906A8100D009D3 /* UserSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81C3BA2C906A8100D009D3 /* UserSettingsService.swift */; };
 		7B8407CE2C87A2BF001741CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8407CD2C87A2BF001741CB /* AppDelegate.swift */; };
 		7B8407D02C87A2BF001741CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8407CF2C87A2BF001741CB /* SceneDelegate.swift */; };
 		7B8407D22C87A2BF001741CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8407D12C87A2BF001741CB /* ViewController.swift */; };
@@ -143,6 +144,7 @@
 		7BDA22802C8C7E67002E37E9 /* ChatroomHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA227F2C8C7E67002E37E9 /* ChatroomHttpService.swift */; };
 		7BDA22822C8C7F49002E37E9 /* AccountHttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA22812C8C7F49002E37E9 /* AccountHttpRouter.swift */; };
 		7BDC20102C8C7149004ED227 /* HttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDC200F2C8C7149004ED227 /* HttpRouter.swift */; };
+		7BFEC8FF2C9091C900350AE4 /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEC8FE2C9091C900350AE4 /* TokenData.swift */; };
 		9A3AA4916E964AB4EE1974C6 /* Pods_ChatroomSignUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D241FB9BF826F7059B992D /* Pods_ChatroomSignUp.framework */; };
 		BB55D0CB798747FC0F99B4B2 /* Pods_Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C409490B4C22623935077A1D /* Pods_Profile.framework */; };
 		BC8FC8FF2D4C6506CAC9B5EB /* Pods_ChatroomLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284EF381A0FF54B8CAC3A819 /* Pods_ChatroomLogin.framework */; };
@@ -278,6 +280,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7B780AFE2C88249D00D51F15;
 			remoteInfo = UseCases;
+		};
+		7B81C3B82C8EE6C900D009D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B8407C22C87A2BF001741CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B780B122C88267F00D51F15;
+			remoteInfo = Models;
 		};
 		7B8407F52C87A387001741CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -579,6 +588,7 @@
 		7B780B272C8827EE00D51F15 /* ChatroomService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatroomService.h; sourceTree = "<group>"; };
 		7B780B302C88287600D51F15 /* ChatroomSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomSocketService.swift; sourceTree = "<group>"; };
 		7B780B322C882A5D00D51F15 /* UseCasesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesFactory.swift; sourceTree = "<group>"; };
+		7B81C3BA2C906A8100D009D3 /* UserSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsService.swift; sourceTree = "<group>"; };
 		7B8407CA2C87A2BF001741CB /* ChatMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8407CD2C87A2BF001741CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B8407CF2C87A2BF001741CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -643,6 +653,7 @@
 		7BDA227F2C8C7E67002E37E9 /* ChatroomHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomHttpService.swift; sourceTree = "<group>"; };
 		7BDA22812C8C7F49002E37E9 /* AccountHttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHttpRouter.swift; sourceTree = "<group>"; };
 		7BDC200F2C8C7149004ED227 /* HttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRouter.swift; sourceTree = "<group>"; };
+		7BFEC8FE2C9091C900350AE4 /* TokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
 		7D11C52B8467B445C667DC8C /* Pods_Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87383B86A13961BB9D218485 /* Pods_EmptyView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmptyView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F869B358F59F1CF92F6DCDC /* Pods-Utility.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utility.debug.xcconfig"; path = "Target Support Files/Pods-Utility/Pods-Utility.debug.xcconfig"; sourceTree = "<group>"; };
@@ -907,6 +918,7 @@
 				7B780B152C88267F00D51F15 /* Models.h */,
 				7B94E4F82C8A577200DE1990 /* SocketsResponse.swift */,
 				7B780B1E2C88269F00D51F15 /* User.swift */,
+				7BFEC8FE2C9091C900350AE4 /* TokenData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -918,6 +930,7 @@
 				7B780B272C8827EE00D51F15 /* ChatroomService.h */,
 				7B780B302C88287600D51F15 /* ChatroomSocketService.swift */,
 				7B00632C2C8E0DCC0016903F /* AccountService.swift */,
+				7B81C3BA2C906A8100D009D3 /* UserSettingsService.swift */,
 			);
 			path = ChatroomService;
 			sourceTree = "<group>";
@@ -1583,6 +1596,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B81C3B92C8EE6C900D009D3 /* PBXTargetDependency */,
 				7B81C3B72C8EE65D00D009D3 /* PBXTargetDependency */,
 				7B3B95B82C8B4E0300AF4837 /* PBXTargetDependency */,
 				7B94E5692C8A76B300DE1990 /* PBXTargetDependency */,
@@ -2220,6 +2234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B0063302C8E10DC0016903F /* ChatroomsErrors.swift in Sources */,
+				7BFEC8FF2C9091C900350AE4 /* TokenData.swift in Sources */,
 				7B780B1F2C88269F00D51F15 /* User.swift in Sources */,
 				7B94E4F92C8A577200DE1990 /* SocketsResponse.swift in Sources */,
 			);
@@ -2230,6 +2245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BDA22822C8C7F49002E37E9 /* AccountHttpRouter.swift in Sources */,
+				7B81C3BB2C906A8100D009D3 /* UserSettingsService.swift in Sources */,
 				7BDC20102C8C7149004ED227 /* HttpRouter.swift in Sources */,
 				7B4E28002C8C6DE3000AA39B /* HttpService.swift in Sources */,
 				7B00632D2C8E0DCC0016903F /* AccountService.swift in Sources */,
@@ -2437,6 +2453,11 @@
 			isa = PBXTargetDependency;
 			target = 7B780AFE2C88249D00D51F15 /* UseCases */;
 			targetProxy = 7B81C3B62C8EE65D00D009D3 /* PBXContainerItemProxy */;
+		};
+		7B81C3B92C8EE6C900D009D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B780B122C88267F00D51F15 /* Models */;
+			targetProxy = 7B81C3B82C8EE6C900D009D3 /* PBXContainerItemProxy */;
 		};
 		7B8407F62C87A387001741CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

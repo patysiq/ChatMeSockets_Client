@@ -46,7 +46,8 @@ protocol ReactiveHttpRouter: HttpRouter, ReactiveCompatible { }
 
 extension Reactive where Base: ReactiveHttpRouter {
     
-    func request<Service: ReactiveHttpService>(withService service: Service) throws -> Observable<DataRequest>{
-        return try service.rx.request(base.asURLRequest())
+    func request<Service: ReactiveHttpService>(withService service: Service) -> Observable<DataRequest> {
+        do { return try service.rx.request(base.asURLRequest())}
+        catch { return .error(error)}
     }
 }

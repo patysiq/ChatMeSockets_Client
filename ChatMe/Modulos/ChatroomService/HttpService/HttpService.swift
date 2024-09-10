@@ -22,6 +22,7 @@ public protocol ReactiveHttpService: HttpService, ReactiveCompatible { }
 extension Reactive where Base: ReactiveHttpService {
     
     public func request(_ urlRequest: URLRequestConvertible) -> Observable<DataRequest> {
-        return base.session.rx.request(urlRequest: urlRequest)
+        return base.session.rx
+            .request(urlRequest: urlRequest)
     }
 }
