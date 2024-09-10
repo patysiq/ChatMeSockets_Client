@@ -144,6 +144,14 @@
 		7BDA22802C8C7E67002E37E9 /* ChatroomHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA227F2C8C7E67002E37E9 /* ChatroomHttpService.swift */; };
 		7BDA22822C8C7F49002E37E9 /* AccountHttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA22812C8C7F49002E37E9 /* AccountHttpRouter.swift */; };
 		7BDC20102C8C7149004ED227 /* HttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDC200F2C8C7149004ED227 /* HttpRouter.swift */; };
+		7BFCEA462C90D8190074757B /* ChatroomHttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFCEA452C90D8190074757B /* ChatroomHttpRouter.swift */; };
+		7BFCEA482C90DA810074757B /* ChatroomsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFCEA472C90DA810074757B /* ChatroomsService.swift */; };
+		7BFCEA4A2C90E54C0074757B /* Chatrooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFCEA492C90E54C0074757B /* Chatrooms.swift */; };
+		7BFCEA4E2C90EACB0074757B /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFCEA4D2C90EACB0074757B /* Member.swift */; };
+		7BFCEA502C90EAFD0074757B /* Chatroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFCEA4F2C90EAFD0074757B /* Chatroom.swift */; };
+		7BFCEA522C90EBE20074757B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFCEA512C90EBE20074757B /* Message.swift */; };
+		7BFCEA542C90EC8C0074757B /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFCEA532C90EC8C0074757B /* Role.swift */; };
+		7BFCEA562C90F1F00074757B /* ChatroomsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFCEA552C90F1F00074757B /* ChatroomsInteractor.swift */; };
 		7BFEC8FF2C9091C900350AE4 /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFEC8FE2C9091C900350AE4 /* TokenData.swift */; };
 		9A3AA4916E964AB4EE1974C6 /* Pods_ChatroomSignUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D241FB9BF826F7059B992D /* Pods_ChatroomSignUp.framework */; };
 		BB55D0CB798747FC0F99B4B2 /* Pods_Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C409490B4C22623935077A1D /* Pods_Profile.framework */; };
@@ -224,6 +232,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7B6F55AB2C8B455D0045CE2D;
 			remoteInfo = EmptyView;
+		};
+		7B5B5C702C9106C3005C1E5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B8407C22C87A2BF001741CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B780AFE2C88249D00D51F15;
+			remoteInfo = UseCases;
 		};
 		7B63BA9F2C8E44F0009AC08B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -653,6 +668,14 @@
 		7BDA227F2C8C7E67002E37E9 /* ChatroomHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomHttpService.swift; sourceTree = "<group>"; };
 		7BDA22812C8C7F49002E37E9 /* AccountHttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHttpRouter.swift; sourceTree = "<group>"; };
 		7BDC200F2C8C7149004ED227 /* HttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRouter.swift; sourceTree = "<group>"; };
+		7BFCEA452C90D8190074757B /* ChatroomHttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomHttpRouter.swift; sourceTree = "<group>"; };
+		7BFCEA472C90DA810074757B /* ChatroomsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomsService.swift; sourceTree = "<group>"; };
+		7BFCEA492C90E54C0074757B /* Chatrooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatrooms.swift; sourceTree = "<group>"; };
+		7BFCEA4D2C90EACB0074757B /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		7BFCEA4F2C90EAFD0074757B /* Chatroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatroom.swift; sourceTree = "<group>"; };
+		7BFCEA512C90EBE20074757B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		7BFCEA532C90EC8C0074757B /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		7BFCEA552C90F1F00074757B /* ChatroomsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomsInteractor.swift; sourceTree = "<group>"; };
 		7BFEC8FE2C9091C900350AE4 /* TokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
 		7D11C52B8467B445C667DC8C /* Pods_Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87383B86A13961BB9D218485 /* Pods_EmptyView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmptyView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -907,6 +930,7 @@
 				7B780B012C88249D00D51F15 /* UseCases.h */,
 				7B780B0C2C88251B00D51F15 /* AccountInteractor.swift */,
 				7B780B322C882A5D00D51F15 /* UseCasesFactory.swift */,
+				7BFCEA552C90F1F00074757B /* ChatroomsInteractor.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -919,6 +943,11 @@
 				7B94E4F82C8A577200DE1990 /* SocketsResponse.swift */,
 				7B780B1E2C88269F00D51F15 /* User.swift */,
 				7BFEC8FE2C9091C900350AE4 /* TokenData.swift */,
+				7BFCEA492C90E54C0074757B /* Chatrooms.swift */,
+				7BFCEA512C90EBE20074757B /* Message.swift */,
+				7BFCEA4D2C90EACB0074757B /* Member.swift */,
+				7BFCEA4F2C90EAFD0074757B /* Chatroom.swift */,
+				7BFCEA532C90EC8C0074757B /* Role.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -929,6 +958,8 @@
 				7B4E27FE2C8B918A000AA39B /* HttpService */,
 				7B780B272C8827EE00D51F15 /* ChatroomService.h */,
 				7B780B302C88287600D51F15 /* ChatroomSocketService.swift */,
+				7BFCEA452C90D8190074757B /* ChatroomHttpRouter.swift */,
+				7BFCEA472C90DA810074757B /* ChatroomsService.swift */,
 				7B00632C2C8E0DCC0016903F /* AccountService.swift */,
 				7B81C3BA2C906A8100D009D3 /* UserSettingsService.swift */,
 			);
@@ -1553,6 +1584,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7B5B5C712C9106C3005C1E5F /* PBXTargetDependency */,
 				7B00632B2C8E0CFB0016903F /* PBXTargetDependency */,
 				7B3B95B42C8B4DF200AF4837 /* PBXTargetDependency */,
 				7B94E5352C8A71F400DE1990 /* PBXTargetDependency */,
@@ -2226,6 +2258,7 @@
 				7B94E4F32C89264A00DE1990 /* ChatroomSocketService.swift in Sources */,
 				7B780B332C882A5D00D51F15 /* UseCasesFactory.swift in Sources */,
 				7B780B0D2C88251B00D51F15 /* AccountInteractor.swift in Sources */,
+				7BFCEA562C90F1F00074757B /* ChatroomsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2234,8 +2267,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B0063302C8E10DC0016903F /* ChatroomsErrors.swift in Sources */,
+				7BFCEA4E2C90EACB0074757B /* Member.swift in Sources */,
+				7BFCEA4A2C90E54C0074757B /* Chatrooms.swift in Sources */,
 				7BFEC8FF2C9091C900350AE4 /* TokenData.swift in Sources */,
 				7B780B1F2C88269F00D51F15 /* User.swift in Sources */,
+				7BFCEA542C90EC8C0074757B /* Role.swift in Sources */,
+				7BFCEA522C90EBE20074757B /* Message.swift in Sources */,
+				7BFCEA502C90EAFD0074757B /* Chatroom.swift in Sources */,
 				7B94E4F92C8A577200DE1990 /* SocketsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2244,7 +2282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BFCEA462C90D8190074757B /* ChatroomHttpRouter.swift in Sources */,
 				7BDA22822C8C7F49002E37E9 /* AccountHttpRouter.swift in Sources */,
+				7BFCEA482C90DA810074757B /* ChatroomsService.swift in Sources */,
 				7B81C3BB2C906A8100D009D3 /* UserSettingsService.swift in Sources */,
 				7BDC20102C8C7149004ED227 /* HttpRouter.swift in Sources */,
 				7B4E28002C8C6DE3000AA39B /* HttpService.swift in Sources */,
@@ -2413,6 +2453,11 @@
 			isa = PBXTargetDependency;
 			target = 7B6F55AB2C8B455D0045CE2D /* EmptyView */;
 			targetProxy = 7B3B95B72C8B4E0300AF4837 /* PBXContainerItemProxy */;
+		};
+		7B5B5C712C9106C3005C1E5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B780AFE2C88249D00D51F15 /* UseCases */;
+			targetProxy = 7B5B5C702C9106C3005C1E5F /* PBXContainerItemProxy */;
 		};
 		7B63BAA02C8E44F0009AC08B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

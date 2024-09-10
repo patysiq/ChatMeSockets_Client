@@ -45,8 +45,14 @@ public extension TokenData {
         return String(data: try self.jsonData(), encoding: encoding)
     }
     
-    func with(email: String? = nil, acessToken: String? = nil, refreshToken: String? = nil, expiresIn: Int? = nil) {
-        
+    func with(email: String? = nil, 
+              acessToken: String? = nil,
+              refreshToken: String? = nil,
+              expiresIn: Int64? = nil) -> TokenData {
+        return TokenData(email: email ?? self.email,
+                         acessToken: acessToken ?? self.acessToken,
+                         refreshToken: refreshToken ?? self.refreshToken,
+                         expiresIn: expiresIn ?? self.expiresIn)
     }
 }
 
