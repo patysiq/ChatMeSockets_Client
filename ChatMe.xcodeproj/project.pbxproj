@@ -60,6 +60,7 @@
 		7B780B342C882B8000D51F15 /* ChatroomService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B780B252C8827EE00D51F15 /* ChatroomService.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		7B780B352C882B8000D51F15 /* ChatroomService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B780B252C8827EE00D51F15 /* ChatroomService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7B81C3BB2C906A8100D009D3 /* UserSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81C3BA2C906A8100D009D3 /* UserSettingsService.swift */; };
+		7B83C0C02C9114030008A44F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83C0BF2C9114030008A44F /* Date+Extension.swift */; };
 		7B8407CE2C87A2BF001741CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8407CD2C87A2BF001741CB /* AppDelegate.swift */; };
 		7B8407D02C87A2BF001741CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8407CF2C87A2BF001741CB /* SceneDelegate.swift */; };
 		7B8407D22C87A2BF001741CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8407D12C87A2BF001741CB /* ViewController.swift */; };
@@ -144,6 +145,8 @@
 		7BDA22802C8C7E67002E37E9 /* ChatroomHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA227F2C8C7E67002E37E9 /* ChatroomHttpService.swift */; };
 		7BDA22822C8C7F49002E37E9 /* AccountHttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA22812C8C7F49002E37E9 /* AccountHttpRouter.swift */; };
 		7BDC20102C8C7149004ED227 /* HttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDC200F2C8C7149004ED227 /* HttpRouter.swift */; };
+		7BF0F4282C92AA6B0018F793 /* ChatrromsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF0F4262C92AA6B0018F793 /* ChatrromsCell.swift */; };
+		7BF0F4292C92AA6B0018F793 /* ChatrromsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BF0F4272C92AA6B0018F793 /* ChatrromsCell.xib */; };
 		7BFCEA462C90D8190074757B /* ChatroomHttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFCEA452C90D8190074757B /* ChatroomHttpRouter.swift */; };
 		7BFCEA482C90DA810074757B /* ChatroomsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFCEA472C90DA810074757B /* ChatroomsService.swift */; };
 		7BFCEA4A2C90E54C0074757B /* Chatrooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFCEA492C90E54C0074757B /* Chatrooms.swift */; };
@@ -604,6 +607,7 @@
 		7B780B302C88287600D51F15 /* ChatroomSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomSocketService.swift; sourceTree = "<group>"; };
 		7B780B322C882A5D00D51F15 /* UseCasesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesFactory.swift; sourceTree = "<group>"; };
 		7B81C3BA2C906A8100D009D3 /* UserSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsService.swift; sourceTree = "<group>"; };
+		7B83C0BF2C9114030008A44F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		7B8407CA2C87A2BF001741CB /* ChatMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8407CD2C87A2BF001741CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B8407CF2C87A2BF001741CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -668,6 +672,8 @@
 		7BDA227F2C8C7E67002E37E9 /* ChatroomHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomHttpService.swift; sourceTree = "<group>"; };
 		7BDA22812C8C7F49002E37E9 /* AccountHttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHttpRouter.swift; sourceTree = "<group>"; };
 		7BDC200F2C8C7149004ED227 /* HttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRouter.swift; sourceTree = "<group>"; };
+		7BF0F4262C92AA6B0018F793 /* ChatrromsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatrromsCell.swift; sourceTree = "<group>"; };
+		7BF0F4272C92AA6B0018F793 /* ChatrromsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatrromsCell.xib; sourceTree = "<group>"; };
 		7BFCEA452C90D8190074757B /* ChatroomHttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomHttpRouter.swift; sourceTree = "<group>"; };
 		7BFCEA472C90DA810074757B /* ChatroomsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomsService.swift; sourceTree = "<group>"; };
 		7BFCEA492C90E54C0074757B /* Chatrooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatrooms.swift; sourceTree = "<group>"; };
@@ -1076,6 +1082,7 @@
 				7B6F559F2C8B1F840045CE2D /* UINavigationController+Extensions.swift */,
 				7B6F55A42C8B237E0045CE2D /* UIColor+Extensions.swift */,
 				7B0063252C8E08C30016903F /* JSONShemaSupport.swift */,
+				7B83C0BF2C9114030008A44F /* Date+Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1119,6 +1126,7 @@
 		7B94E5202C8A6AC000DE1990 /* Chatrooms */ = {
 			isa = PBXGroup;
 			children = (
+				7BF0F42A2C92AA700018F793 /* Cell */,
 				7B94E5212C8A6AC000DE1990 /* Chatrooms.h */,
 				7B94E52A2C8A6B0F00DE1990 /* ChatroomsViewController.swift */,
 				7B94E52C2C8A6B4100DE1990 /* Chatrooms.storyboard */,
@@ -1155,6 +1163,15 @@
 				7B3B95BB2C8B68A200AF4837 /* Profile.xcassets */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		7BF0F42A2C92AA700018F793 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7BF0F4262C92AA6B0018F793 /* ChatrromsCell.swift */,
+				7BF0F4272C92AA6B0018F793 /* ChatrromsCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		BF556A5112E9FCCF80F37EEA /* Pods */ = {
@@ -1841,6 +1858,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B3B95BA2C8B4E5D00AF4837 /* Chatrooms.xcassets in Resources */,
+				7BF0F4292C92AA6B0018F793 /* ChatrromsCell.xib in Resources */,
 				7B94E52D2C8A6B4100DE1990 /* Chatrooms.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2343,6 +2361,7 @@
 				7B6F55A02C8B1F840045CE2D /* UINavigationController+Extensions.swift in Sources */,
 				7B84083C2C87AE66001741CB /* UiViewController+Extensions.swift in Sources */,
 				7B6F55A52C8B237E0045CE2D /* UIColor+Extensions.swift in Sources */,
+				7B83C0C02C9114030008A44F /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2373,6 +2392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B94E5332C8A6E5200DE1990 /* Router.swift in Sources */,
+				7BF0F4282C92AA6B0018F793 /* ChatrromsCell.swift in Sources */,
 				7B94E5312C8A6CDD00DE1990 /* Presenter.swift in Sources */,
 				7B94E52B2C8A6B0F00DE1990 /* ChatroomsViewController.swift in Sources */,
 				7B94E52F2C8A6BC000DE1990 /* Builder.swift in Sources */,

@@ -12,8 +12,8 @@ import Models
 
 public final class ChatroomsInteractor {
    
-    private let chatroomsRelay: BehaviorRelay<[Chatroom]> = BehaviorRelay(value: [])
-    public lazy var chatrooms: Observable<[Chatroom]> = self.chatroomsRelay.asObservable()
+    private let chatroomsRelay: BehaviorRelay<Set<Chatroom>> = BehaviorRelay(value: [])
+    public lazy var chatrooms: Observable<Set<Chatroom>> = self.chatroomsRelay.asObservable()
     private let chatroomsService: ChatroomAPI
     
     init(chatroomsService: ChatroomAPI) {
@@ -27,7 +27,7 @@ public extension ChatroomsInteractor  {
         self.chatroomsService
             .chatrooms()
             .map({ [chatroomsRelay] (chatrooms) in
-                chatroomsRelay.accept(chatroomsRelay.value + chatrooms)
+                chatroomsRelay.accept(Set(chatroomsRelay.value + chatrooms))
             })
             .asCompletable()
     }

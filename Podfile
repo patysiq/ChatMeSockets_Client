@@ -11,6 +11,7 @@ target 'ChatMe' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
 end
 
@@ -24,6 +25,7 @@ target 'ChatroomLogin' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
 end
 
@@ -37,6 +39,7 @@ target 'Landing' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
 end
 
@@ -50,6 +53,7 @@ target 'Utility' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
 end
 
@@ -63,6 +67,7 @@ target 'Window' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
   target 'WindowTests' do
     # Pods for testing
@@ -80,6 +85,7 @@ target 'UseCases' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
 end
 
@@ -93,6 +99,7 @@ target 'Models' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
 end
 
@@ -106,6 +113,7 @@ target 'Tabbar' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
 end
 
@@ -119,6 +127,7 @@ target 'ChatroomService' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
 end
 
@@ -132,6 +141,7 @@ target 'EmptyView' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
 end
 
@@ -145,6 +155,7 @@ target 'Chatrooms' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
 end
 
@@ -158,6 +169,7 @@ target 'Friends' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
 end
 
@@ -171,6 +183,7 @@ target 'Profile' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
 end
 
@@ -184,6 +197,7 @@ target 'ChatroomSignUp' do
     pod 'Socket.IO-Client-Swift', '~> 15.2.0'
     pod 'Alamofire'
     pod 'RxAlamofire'
+    pod 'RxDataSources', '~> 5.0'
 
 end
 

@@ -31,3 +31,18 @@ public extension Chatroom {
         return String(data: try self.jsonData(), encoding: encoding)
     }
 }
+
+extension Chatroom : Equatable {
+    
+    public static func == (lsh: Chatroom , rsh: Chatroom) -> Bool {
+        lsh.id == rsh.id
+        
+    }
+}
+
+extension Chatroom: Hashable {
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}

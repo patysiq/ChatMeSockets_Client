@@ -8,6 +8,9 @@
 import UIKit
 import EmptyView
 import Utility
+import RxSwift
+import RxCocoa
+import RxDataSources
 
 class ChatroomsViewController: UIViewController {
     
@@ -29,7 +32,23 @@ class ChatroomsViewController: UIViewController {
         return button
     }()
     
-
+    private var emptyView: EmptyView = {
+        let emptyView = EmptyView(frame: .zero)
+        let emptyImage = UIImage(systemName: "stopwatch")!
+        emptyView.config(image: emptyImage, title: "Uh Ho", subtitle: "Parece que não há salas de chat.")
+        return emptyView
+    }()
+    
+    private lazy var dataSource = RxTableViewSectionedReloadDataSource<ChatroomsSection>(configureCell: { [weak self] (_ , tableView, indexPath, item) in
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ChatroomsCell.self), for: indexPath) as? ChatroomsCell else { return UITableViewCell() }
+        cell.configure(usingViewModel: item)
+        
+        return cell
+    })
+    
+    private var bag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = presenterProducer(())
@@ -43,13 +62,20 @@ private extension ChatroomsViewController {
     
     func setupUI() {
         self.view.addSubview(createChatroomButton)
-        guard let emptyImage = UIImage(systemName: "stopwatch") else {return}
-        let emptyView = EmptyView(frame: .zero)
-        emptyView.config(image: emptyImage, title: "Uh Ho", subtitle: "Parece que não há salas de chat.")
-        tableview.backgroundView = emptyView
+        let chatroomCellNib = UINib(nibName: "ChatrromsCell", bundle: Bundle(for: type(of: self)))
+        tableview.register(chatroomCellNib, forCellReuseIdentifier: String(describing: ChatroomsCell.self))
     }
     
     func setupBinding() {
+        self.presenter.output.sections
+            .drive(self.tableview.rx.items(dataSource: dataSource))
+            .disposed(by: bag)
         
+        self.presenter.output.sections
+            .map({ $0.first! })
+            .map({ $0.items.count  > 0 })
+            .map({[tableview] in tableview?.backgroundView = $0 ? nil : self.emptyView })
+            .drive()
+            .disposed(by: bag)
     }
 }
