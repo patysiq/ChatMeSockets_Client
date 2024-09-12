@@ -31,12 +31,21 @@ public extension AccountInteractor {
             .login(email: email, password: password)
             .flatMap(saveUser(user:))
     }
-        
-        func signUp(email: String, username: String, password: String) -> Single<()> {
-            self.accountService
-                .signUp(user: User(email: email, username: username, password: password))
-                .flatMap(saveUser(user:))
+    
+    func signUp(email: String, username: String, password: String) -> Single<()> {
+        self.accountService
+            .signUp(user: User(email: email, username: username, password: password))
+            .flatMap(saveUser(user:))
+    }
+    
+    func logout() -> Single<()> {
+        return Single.create { (single) -> Disposable in
+            self.userSettings.clearTokens()
+            single(.success(()))
+            return Disposables.create()
         }
+        
+    }
         
 //        self.websocketService.login(email: email, password: password)
 //        

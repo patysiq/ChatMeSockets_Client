@@ -12,7 +12,9 @@ import Models
 
 
 protocol Presentation {
-    typealias Input = ()
+    typealias Input = (
+        onLogout: Driver<Void> , ()
+    )
     typealias Output = (
         username: Driver<String>,
         email: Driver<String>
@@ -29,11 +31,15 @@ class Presenter : Presentation{
     var output: Output
     
     typealias UseCases = (
-        input: (),
+        input: (
+            logout: () -> Single<()>, ()
+        ),
         output: (
             profileUser: Observable<User>, ()
         )
     )
+    
+    private let bag = DisposeBag()
     private let dependencias: Dependencias
     private let useCases: UseCases
     private let router: Routing
@@ -59,6 +65,17 @@ private extension Presenter {
     }
     
     func process() {
-        
+        self.input.onLogout
+            .asObservable()
+            .flatMap({ [useCases] _ in
+                useCases.input.logout()
+            })
+            .map({ [router] (_) in
+                router.routeToRoot()
+            })
+            .asDriver(onErrorDriveWith: .never())
+            .drive()
+            .disposed(by: bag)
+            
     }
 }

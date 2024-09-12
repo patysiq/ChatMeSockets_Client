@@ -13,11 +13,11 @@ import Profile
 
 public final class Builder {
     
-    public static func build() -> UITabBarController {
+    public static func build(onLogout: @escaping () -> Void) -> UITabBarController {
         let submodules: Router.Submodules = (
             chatrooms: Chatrooms.Builder.build(usingNavigationFactory: UINavigationController.build),
             friends: Friends.Builder.build(usingNavigationFactory: UINavigationController.build),
-            profile: Profile.Builder.build(usingNavigationFactory: UINavigationController.build)
+            profile: Profile.Builder.build(usingNavigationFactory: UINavigationController.build, onLogout: onLogout)
         )
         let tabs: ChaMeTabs = Router.tabs(usingSubmodules: submodules)
         let presenter = Presenter(useCases: ())
